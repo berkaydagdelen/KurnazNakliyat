@@ -1,0 +1,23 @@
+﻿.whyUs-section .container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+    .whyUs-section .container .featured-points {
+        width: 100%;
+    }
+
+    .whyUs-section .container .whyus-wrap {
+        width: 100%;
+    }
+
+.whyUs-section {
+    background: #2e3192;
+    /*color: #fff;*/
+}
+
+    .whyUs-section .container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }

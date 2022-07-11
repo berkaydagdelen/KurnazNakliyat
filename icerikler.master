@@ -1,0 +1,361 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="icerikler.master.cs" Inherits="MasterPage2" %>
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <title>Kurnaz Nakliyat</title>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="Kesintisiz Memnuniyet ve Kaliteli Hizmet için Doğru Adres Kongre&Fuar&Ses ve Işık Taşımacılığı">
+    <meta name="keywords" content="Kurnaz Nakliyat,Kongre Taşımacılığı,Fuar Taşımacılığı,Ses ve Işık Taşımacılığı,Evden Eve Taşımacılık,evden eve nakliyat, lojistik ve taşımacılık">
+    <meta property="og:site_name" content="Kurnaz Nakliyat | Kongre & Fuar & Ses ve Işık Taşımacılığı">
+    <meta name="author" content="Berkay DAĞDELEN">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="HalilSite/edulab/css/all.css">
+    <link rel="stylesheet" type="text/css" href="HalilSite/edulab/css/all.min.css">
+
+    <link rel="stylesheet" type="text/css" href="HalilSite/edulab/css/lightbox.css">
+    <link rel="stylesheet" type="text/css" href="HalilSite/edulab/css/flexslider.css">
+    <link rel="stylesheet" type="text/css" href="HalilSite/edulab/css/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="HalilSite/edulab/css/owl.theme.default.css">
+    <link rel="stylesheet" type="text/css" href="HalilSite/edulab/css/jquery.rateyo.css" />
+    <%--  <link rel="stylesheet" type="text/css" href="HalilSite/edulab/css/bootstrap.css" />--%>
+
+    <link href="HalilSite/edulab/css/markalar.css" rel="stylesheet" />
+
+
+    <!-- <link rel="stylesheet" type="text/css" href="css/jquery.mmenu.all.css" /> -->
+    <!-- <link rel="stylesheet" type="text/css" href="css/meanmenu.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="HalilSite/edulab/inner-page-style.css">
+    <link rel="stylesheet" type="text/css" href="HalilSite/edulab/style.css">
+
+    <link href="HalilSite/edulab/kisitlama.css" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700" rel="stylesheet">
+</head>
+
+
+<body>
+
+    <div id="page" class="site" itemscope itemtype="http://schema.org/LocalBusiness">
+
+
+        <header class="site-header">
+            <div class="top-header">
+                <div class="container">
+
+                    <asp:Repeater ID="Repeater3" runat="server">
+                        <ItemTemplate>
+
+                            <div class="top-header-left">
+
+
+                                <div class="top-header-block">
+                                    <a href="mailto:info@educationpro.com" itemprop="email"><i class="fas fa-envelope"></i><%#Eval("Mail") %></a>
+                                </div>
+                                <div class="top-header-block">
+
+
+
+
+
+                                    <a href="#" itemprop="telephone"><i class="fas fa-phone"></i><font face="verdana">+90 <%#Eval("AdminTelNo") %></a></font>
+                             
+
+                                </div>
+
+                            </div>
+                            <div class="top-header-right">
+                                <div class="social-block">
+                                    <ul class="social-list">
+
+                                        <li><a href="<%#Eval("Facebook") %>"><i class="fab fa-facebook-square"></i></a></li>
+                                        <li><a href="<%#Eval("Twitter") %>"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="<%#Eval("instagram") %>"><i class="fab fa-instagram"></i></a></li>
+                                        <li><a href="<%#Eval("Youtube") %>"><i class="fab fa-youtube"></i></a></li>
+
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                        </ItemTemplate>
+                    </asp:Repeater>
+
+
+                </div>
+            </div>
+            <!-- Top header Close -->
+            <div class="main-header">
+                <div class="container">
+                    <div class="logo-wrap" itemprop="logo">
+
+
+
+
+                        <asp:Repeater ID="Repeater13" runat="server">
+                            <ItemTemplate>
+
+                                <a href="AnaSayfa.aspx" class="logo">
+
+                                    <img src="<%#Eval("Logo") %>" style="width: 200px; height: 70px" alt=""></a>
+
+                            </ItemTemplate>
+                        </asp:Repeater>
+
+                        <!-- <h1>Education</h1> -->
+                    </div>
+                    <div class="nav-wrap">
+                        <nav class="nav-desktop">
+                            <ul class="menu-list">
+
+                                <li><a href="AnaSayfa.aspx">AnaSayfa</a></li>
+
+
+
+
+                                <li><a href="Filo.aspx">Filo</a></li>
+
+                                <li class="menu-parent">Hizmetler
+									<ul class="sub-menu" style="width: 220px">
+
+                                        <li><a href="Hizmetler.aspx?HizmetTuru=1">Taşımacılık Hizmetleri</a></li>
+                                        <li><a href="Hizmetler.aspx?HizmetTuru=2">Kiralama Hizmetleri</a></li>
+
+
+                                    </ul>
+                                </li>
+
+
+
+
+                                <li><a href="Hakkimizda.aspx">Hakkımızda</a></li>
+                                <li><a href="iletisim.aspx">iletişim</a></li>
+
+
+
+
+                                <%-- <li class="menu-parent">İşler
+									<ul class="sub-menu">
+                                        <asp:Repeater ID="Repeater1" runat="server">
+                                            <ItemTemplate>
+                                                <li><a href="icerikler.aspx?Kategoriid=<%#Eval("Kategoriid")%>"> <%#Eval("KategoriAd") %></a></li>
+                                          
+                                               
+                                                
+                                                
+                                                  </ItemTemplate>
+                                        </asp:Repeater>
+                                    </ul>
+                                </li>
+
+
+                                <asp:Repeater ID="Repeater2" runat="server">
+                                    <ItemTemplate>
+
+
+                                        <li><a href="icerikler.aspx?Kategoriid=<%#Eval("Kategoriid") %>"><%#Eval("KategoriAd") %></a></li>
+
+                                    </ItemTemplate>
+                                </asp:Repeater>
+
+                                <li><a href="Hakkimizda.aspx">Hakkımızda</a></li>
+
+                                <li><a href="iletisim.aspx">İletişim</a></li>--%>
+                            </ul>
+                        </nav>
+                        <div id="bar">
+                            <i class="fas fa-bars"></i>
+                        </div>
+                        <div id="close">
+                            <i class="fas fa-times"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Header Close -->
+
+
+
+        <!-- Learn courses End -->
+
+        <!-- End of gallery Images -->
+
+        <!-- End of Events section -->
+
+        <!-- End of Others talk -->
+
+
+
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+
+        <br />
+        <br />
+
+        <section class="query-section">
+            <div class="container">
+
+                <asp:Repeater ID="Repeater4" runat="server">
+                    <ItemTemplate>
+
+
+                        <p>Herhangi bir sorunuz var mı? Bize bir soru sorun<a href="#" itemprop="telephone"><i class="fas fa-phone"></i><font face="verdana">+90 <%#Eval("AdminTelNo") %></a></font></p>
+
+                    </ItemTemplate>
+                </asp:Repeater>
+            </div>
+        </section>
+
+        <br />
+        <br />
+
+        <!-- Latest News CLosed -->
+
+        <!-- End of Query Section -->
+        <footer class="page-footer" itemprop="footer" itemscope itemtype="http://schema.org/WPFooter">
+            <div class="footer-first-section">
+                <div class="container">
+                    <div class="box-wrap" itemprop="about">
+                        <header>
+                            <h1>Hakkımızda</h1>
+                        </header>
+
+                        <asp:Repeater ID="Repeater1" runat="server">
+                            <ItemTemplate>
+
+                                <p class="kısıtlama"><%#Eval("Hakkimizda") %></p>
+                            </ItemTemplate>
+                        </asp:Repeater>
+
+                        <asp:Repeater ID="Repeater5" runat="server">
+                            <ItemTemplate>
+
+
+                                <h4><i class="fas fa-phone"></i>+90 <%#Eval("AdminTelNo") %></h4>
+                                <h4><i class="fas fa-envelope"></i><%#Eval("Mail") %></h4>
+                                <h4><i class="fas fa-map-marker-alt"></i><%#Eval("Yer") %><h4>
+                            </ItemTemplate>
+                        </asp:Repeater>
+
+                    </div>
+
+                    <div class="box-wrap">
+                        <header>
+                            <h1>Kategoriler</h1>
+                        </header>
+                        <ul>
+                            <li><a href="AnaSayfa.aspx">AnaSayfa</a></li>
+                            <li><a href="Filo.aspx">Filo</a></li>
+                            <li><a href="Hizmetler.aspx?HizmetTuru=2">Kiralama Hizmetleri</a></li>
+                            <li><a href="Hizmetler.aspx?HizmetTuru=1">Taşımacılık Hizmetleri</a></li>
+                            <li><a href="Hakkimizda.aspx">Hakkkımızda </a></li>
+                            <li><a href="iletisim.aspx">İletişim</a></li>
+
+                        </ul>
+                    </div>
+
+
+
+                    <div class="box-wrap" itemprop="about">
+                        <header>
+                            <h1>Hizmetlerimiz</h1>
+                        </header>
+                        <asp:Repeater ID="Repeater2" runat="server">
+                            <ItemTemplate>
+
+                                <p><%#Eval("HakkimizdaAltEk") %></p>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                        <h4>Site Ziyaretçi Sayısı:</h4>
+
+                        <img src="https://counter9.stat.ovh/private/freecounterstat.php?c=67dmbe73gudg6a85gdpr2hm2d5jt4sx5" border="0" title="website view counter" alt="website view counter">
+
+
+                    </div>
+
+
+
+
+                </div>
+            </div>
+            <!-- End of box-Wrap -->
+            <div class="footer-second-section">
+                <div class="container">
+                    <hr class="footer-line">
+
+                    <asp:Repeater ID="Repeater6" runat="server">
+                        <ItemTemplate>
+
+
+                            <ul class="social-list">
+
+                                <li><a href="<%#Eval("Facebook") %>"><i class="fab fa-facebook-square"></i></a></li>
+                                <li><a href="<%#Eval("Twitter") %>"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="<%#Eval("instagram") %>"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="<%#Eval("Youtube") %>"><i class="fab fa-youtube"></i></a></li>
+
+
+                            </ul>
+
+                        </ItemTemplate>
+                    </asp:Repeater>
+
+                    <hr class="footer-line">
+                </div>
+            </div>
+
+
+
+            <div class="footer-last-section">
+                <div class="container">
+                    <p>Telif Hakkı 2022 &copy;<a href="https://berkaydagdelen.com">  berkaydagdelen.com </a></p>
+                </div>
+
+
+                <a style="font-size: medium" class="fab fa-youtube">Site Ziyaretçi Sayısı:</a><img src="https://counter9.stat.ovh/private/freecounterstat.php?c=ha5u7bnpgk7cptnwed3ja9j4pq1t2klu" border="0" title="website hits counter" alt="website hits counter">
+            </div>
+        </footer>
+
+
+
+    </div>
+    <script type="text/javascript" src="HalilSite/edulab/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="HalilSite/edulab/js/lightbox.js"></script>
+    <script type="text/javascript" src="HalilSite/edulab/js/all.js"></script>
+    <script type="text/javascript" src="HalilSite/edulab/js/isotope.pkgd.min.js"></script>
+    <script type="text/javascript" src="HalilSite/edulab/js/owl.carousel.js"></script>
+    <script type="text/javascript" src="HalilSite/edulab/js/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="HalilSite/edulab/js/jquery.rateyo.js"></script>
+    <!-- <script type="text/javascript" src="js/jquery.mmenu.all.js"></script> -->
+    <!-- <script type="text/javascript" src="js/jquery.meanmenu.min.js"></script> -->
+    <script type="text/javascript" src="HalilSite/edulab/js/custom.js"></script>
+
+    <%--<%--SIKINTI ÇIKARSA AÇ--%>
+
+    <%--   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>--%>
+
+
+    <%--<%--SIKINTI ÇIKARSA AÇ --%>
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+
+    <script src="HalilSite/edulab/js/markalar.js"></script>
+
+
+
+
+</body>
+</html>
