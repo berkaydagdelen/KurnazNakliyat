@@ -1,5 +1,5 @@
 # KurnazNakliyat
-It is a logistics site belonging to Kurnaz Nakliyat. You can access many things about logistics. It is a fully manageable dynamic website. Many gaps have been closed. bootstrap, Javascript, Asp.Net technologies are used.
+It is a logistics site belonging to Kurnaz Nakliyat. You can access many things about logistics. It is a fully manageable dynamic website. Many gaps have been closed. Bootstrap, Javascript, Asp.Net technologies are used.
 
 ![1](https://user-images.githubusercontent.com/105209972/178274009-19fd104b-cfa0-49ac-a44c-bbf43bb2563c.png)
 ![2](https://user-images.githubusercontent.com/105209972/178274019-ccc171d6-0cea-4af8-b4e4-d7c4231c88f4.png)
